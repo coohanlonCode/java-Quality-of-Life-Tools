@@ -1,0 +1,11 @@
+TC1234 com.java.project.package.MyClass1.myMethod1|passed
+com.java.project.package.MyClass1.myMethod2|passed
+com.java.project.package.MyClass1.myMethod3|skipped
+TC1234 com.java.project.package.MyClass1.myMethod4|failed
+com.java.project.package.MyClass1.myMethod5|passed
+com.java.project.package.MyClass1.myMethod6|failed
+com.java.project.package.MyClass1.myMethod7|passed
+com.java.project.package.MyClass1.myMethod8|passed
+com.java.project.package.MyClass1.myMethod9|failed
+com.java.project.package.MyClass1.myMethod10|passed
+com.java.project.package.MyClass1.myMethod11|skipped
