@@ -1,4 +1,4 @@
-package com.java.qolTools.files;
+package com.qolTools.files;
 
 import java.io.File;
 import java.io.FileNotFoundException;

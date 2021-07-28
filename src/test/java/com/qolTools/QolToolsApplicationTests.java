@@ -1,4 +1,4 @@
-package com.java.qolTools;
+package com.qolTools;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
