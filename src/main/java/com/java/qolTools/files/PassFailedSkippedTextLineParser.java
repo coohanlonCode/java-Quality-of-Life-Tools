@@ -73,7 +73,8 @@ public class PassFailedSkippedTextLineParser {
                 } else if (isSkippedTest(allResultsLine)) {
                     skippedTestCollection.add(allResultsLine);
 
-                } else {
+                } else
+                if(isPassedTest(allResultsLine)){
                     passedTestCollection.add(allResultsLine);
                 }
 
@@ -250,7 +251,7 @@ public class PassFailedSkippedTextLineParser {
         boolean isExpectedStatus = false;
 
         if (allResultsLine.length() > 0) {
-            String[] array = allResultsLine.split("\\ ");
+            String[] array = allResultsLine.split("\\|");
 
             if ((array.length == 2) && array[1].trim().equalsIgnoreCase(expectedStatusText)) {
                 isExpectedStatus = true;
@@ -259,14 +260,17 @@ public class PassFailedSkippedTextLineParser {
         return isExpectedStatus;
     }
 
-    private static boolean isSkippedTest(String allResultsLine) {
-        return isNonTestCaseLine(allResultsLine, "skipped");
+    private static boolean isPassedTest(String allResultsLine) {
+        return isNonTestCaseLine(allResultsLine, "passed");
     }
 
     private static boolean isFailedTest(String allResultsLine) {
         return isNonTestCaseLine(allResultsLine, "failed");
     }
 
+    private static boolean isSkippedTest(String allResultsLine) {
+        return isNonTestCaseLine(allResultsLine, "skipped");
+    }
 
     private static String createPassedFile(String testRunFolderPath) {
         return createFile(testRunFolderPath, "%_PASSED_Tests_");
